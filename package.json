@@ -1,12 +1,10 @@
 {
   "name": "PayBolt",
-  "homepage": "https://paybolt.in",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "build": "next build && next export" ,  
     "lint": "next lint",
     "deploy": "vercel --prod"
   },

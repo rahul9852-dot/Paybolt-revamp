@@ -30,15 +30,6 @@ const Home = () => {
         <Grid />
         <HorizontalScrolling/>
         <RecentProjects />
-        {/* <Clients /> */}
-        {/* <Experience /> */}
-        {/* <Approach /> */}
-        {/* {!HAS_NO_FOOTER.includes('/home') && (
-        <>
-          <Accordion/>
-          <Footer/>
-        </>
-      )} */}
       </div>
     </main>
   );

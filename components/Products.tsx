@@ -5,6 +5,8 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { products } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import { useRouter } from "next/navigation";
+import { LampContainer } from "./ui/LampEffect";
+import { motion } from "framer-motion";
 
 const RecentProjects = () => {
 
@@ -13,12 +15,26 @@ const RecentProjects = () => {
     router.push(link)
   }
   return (
-    <div className="py-20">
-      <h1 className="heading">
+    <div className="py-4">
+      <LampContainer>
+      <motion.h1
+        initial={{ opacity: 0.5, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+      >
+        {/* <h1 className="heading"> */}
         Explore{" "}
         <span className="text-purple">Products</span>
-      </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+        {/* </h1> */}
+      </motion.h1>
+    </LampContainer>
+      
+      <div className="flex flex-wrap items-center justify-center p-4 gap-16">
         {products.map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
