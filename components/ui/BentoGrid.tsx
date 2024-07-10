@@ -11,6 +11,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import { InfiniteMovingCards } from "./InfiniteCards";
 
 export const BentoGrid = ({
   className,
@@ -52,7 +53,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["YES Bank", "Fino Bank", "Axis Bank"];
+  const leftLists = [{name:"YES Bank"}, {name:"Fino Bank"}, {name:"Axis Bank"}];
   const rightLists = ["Fino Bank", "Yes Bank", "Axis Bank"];
 
   const [copied, setCopied] = useState(false);
@@ -153,7 +154,7 @@ export const BentoGridItem = ({
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
                     lg:opacity-100 rounded-lg text-center bg-[#10132E]"
                   >
-                    {item}
+                    {item.name}
                   </span>
                 ))}
                 <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>

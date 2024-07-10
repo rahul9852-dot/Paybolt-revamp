@@ -6,6 +6,7 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import HeaderAnimation from "./animation";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import ScrollToTop from "./ScrollTop";
@@ -30,7 +31,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.jpeg" sizes="any" />
       </head>
       <body className={inter.className}>
-        {/* <HeaderAnimation/> */}
+        <HeaderAnimation/>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
