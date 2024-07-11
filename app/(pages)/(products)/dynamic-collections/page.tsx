@@ -100,7 +100,6 @@ const DynamicQrCollections = () => {
             animationSpeed={3}
             containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
             colors={[
-              // change the colors of the
               [255, 166, 158],
               [221, 255, 247],
             ]}

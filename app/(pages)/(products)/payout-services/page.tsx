@@ -9,6 +9,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { payoutFeatures } from "@/constants/payout.constants";
 import { WobbleCard } from "@/components/ui/WobbleCard";
+import Image from "next/image";
 
  
 const PayOuts = () => {
@@ -23,7 +24,7 @@ const PayOuts = () => {
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
           Send and receive money instantly and securely with our seamless money transfer service.          </p>
         </div>
-        <img
+        <Image
           src="/Money_transfer.png"
           width={500}
           height={500}
@@ -51,10 +52,11 @@ const PayOuts = () => {
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
+              <Image
                 src={feature.thumbnail}
                 alt={feature.thumbnail}
                 className="lg:w-32 md:w-20 w-16"
+                loading="lazy"
               />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">

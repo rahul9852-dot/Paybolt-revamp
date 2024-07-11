@@ -14,7 +14,7 @@ const Footer = () => {
           <img
             src="/favicon.jpeg"
             alt="Bulkpe"
-            className="flex items-center justify-center  mx-auto rounded-md"
+            className="flex  mx-auto rounded-md"
             defaultChecked
           />
         </div>

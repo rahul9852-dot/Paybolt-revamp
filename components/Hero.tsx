@@ -54,13 +54,15 @@ const Hero = () => {
           <TypewriterEffect className="text-center md:tracking-wider my-4 text-sm md:text-lg lg:text-2xl" words={words}  />
           <div className="flex flex-row items-center justify-center my-4 w-full">
                 <AnimatedTooltip items={people} />
-                {stars.map((idx)=>{
-                  <div key={idx} className="flex justify-center ml-6">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" className="h-4 w-4 text-yellow-400 mx-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                {stars.map((idx) => (
+                  <div key={idx} className="flex items-center justify-center">
+                    <div className={idx === 0 ? "ml-6" : ""}>
+                      <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" className="h-4 w-4 text-yellow-400 mx-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
                       </svg>
+                    </div>
                   </div>
-                })}
+                ))}
           </div>
           <span>Trusted by {" "} 2600+ merchants</span>
             <MagicButton

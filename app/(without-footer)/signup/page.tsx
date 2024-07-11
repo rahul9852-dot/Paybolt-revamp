@@ -10,6 +10,7 @@ import {
 
 import { Form } from "@/components/ui/form";
 import Link from "next/link";
+import Image from "next/image";
 
 const SignUp = () => {
   const { control, handleSubmit, errors, form } = useHandleForm({
@@ -101,10 +102,11 @@ const SignUp = () => {
         </div>
       </div>
       <div className="h-full hidden lg:block">
-        <img
+        <Image
           src="/Onboarding.jpg"
           alt="Signup-img"
           className="h-dvh inline-block object-cover"
+          loading="lazy"
         />
       </div>
     </section>
