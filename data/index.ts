@@ -1,7 +1,6 @@
 export const navItems = [
-  { name: "Home", link: "/home" },
+  { name: "Paybolt", link: "/home" },
   { name: "Products", link: "/qr-collections" },
-  // { name: "Testimonials", link: "/testimonials" },
   { name: "Contact", link: "/contacts" },
   {name: "Pricing", link:"/pricing"},
   {name:"Login", link:'/login'}

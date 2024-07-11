@@ -92,19 +92,12 @@
   font-weight: 900;
 }
 
-
-
-
-/* .cardTheme{
-  background:linear-gradient(to top left, #292E49 , #0b0b0f);
-} */
-
 .progress-bar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 10px;
+  height: 4px;
   background:#ec008c;;
   transform-origin: 0%;
   z-index: 9999;

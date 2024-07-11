@@ -12,6 +12,7 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { InfiniteMovingCards } from "./InfiniteCards";
+import { BackgroundBeams } from "./BackGroundBeans";
 
 export const BentoGrid = ({
   className,
@@ -198,6 +199,7 @@ export const BentoGridItem = ({
           )}
         </div>
       </div>
+      <BackgroundBeams />
     </div>
   );
 };

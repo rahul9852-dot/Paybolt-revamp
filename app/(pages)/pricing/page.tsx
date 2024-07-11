@@ -1,10 +1,9 @@
 import MagicButton from "@/components/MagicButton";
-import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
 
 const Pricing = () => {
   return (
-    <main className="max-w-6xl mx-auto pb-18 px-8 mt-40 w-full bg-black-100">
+    <main className="max-w-6xl mx-auto pb-18 px-8 mt-40 w-full">
       <div className="mx-auto mb-14">
         <h1 className="text-4xl font-semibold mb-6 lg:text-5xl text-center">
           <span className="text-indigo-600">Flexible</span> Pricing Plans For

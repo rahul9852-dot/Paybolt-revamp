@@ -2,6 +2,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaSquareXTwitter 
 
 import Link from "next/link";
 import { Button } from "./ui/MovingBorders";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -62,7 +63,7 @@ const Footer = () => {
     </div>
     <div className="grid grid-cols-2 gap-x-20 gap-y-2">
       <Link href='/home' className="mb-2 hover:text-gray-700">
-        Home
+        PayBolt
       </Link>
       <Link
         href='/qr-collections'

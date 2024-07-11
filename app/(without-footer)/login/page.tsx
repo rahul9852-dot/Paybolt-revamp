@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { useHandleForm,  Controller} from '@/shared/formHandler';
+import { useHandleForm} from '@/shared/formHandler';
 import InputField from '@/components/ui/InputField';
 import { LoginForm , loginFormInitialValues, loginFormSchema} from './LoginSchema';
 
@@ -56,40 +56,6 @@ const Login = () => {
                   formControl={control}
                   error={errors.password?.message}
                 />
-
-                {/* {hasOtp && (
-                  <div className="flex flex-col gap-2">
-                    <Label className="text-sm font-sans">OTP</Label>
-                    <Controller
-                      control={control}
-                      name="otp"
-                      render={({ field }) => (
-                        <InputOTP
-                          maxLength={6}
-                          pattern={REGEXP_ONLY_DIGITS_AND_CHARS}
-                          className="w-[70%] mx-auto"
-                          {...field}
-                        >
-                          <InputOTPGroup className="flex justify-between items-center w-full">
-                            <InputOTPSlot index={0} />
-                            <InputOTPSlot index={1} />
-                            <InputOTPSlot index={2} />
-                            <InputOTPSlot index={3} />
-                            <InputOTPSlot index={4} />
-                            <InputOTPSlot index={5} />
-                          </InputOTPGroup>
-                        </InputOTP>
-                      )}
-                    />
-
-                    {errors.otp?.message ? (
-                      <FormMessage className="text-destructive">
-                        {errors.otp?.message}
-                      </FormMessage>
-                    ) : null}
-                  </div>
-                )} */}
-
                 <Button type="submit" className="w-full">
                   {hasOtp ? 'Login' : 'Proceed'}
                 </Button>

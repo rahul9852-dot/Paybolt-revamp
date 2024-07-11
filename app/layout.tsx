@@ -1,17 +1,16 @@
-// components/RootLayout.js
-import Accordion from "@/components/Accordion";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { FollowerPointerCard } from "@/components/ui/FollowingPointer";
 import { navItems } from "@/data";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans, Dancing_Script } from "next/font/google";
 import HeaderAnimation from "./animation";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import ScrollToTop from "./ScrollTop";
 
-const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
+const DancingScript = Dancing_Script({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "PayBolt",
@@ -30,7 +29,15 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.jpeg" sizes="any" />
       </head>
-      <body className={inter.className}>
+      <body className={openSans.className}>
+      {/* <FollowerPointerCard
+        // title={
+        //   <TitleComponent
+        //     // title={blogContent.author}
+        //     // avatar={blogContent.authorAvatar}
+        //   />
+        // }
+      > */}
         <HeaderAnimation/>
         <ThemeProvider
           attribute="class"
@@ -42,6 +49,7 @@ export default function RootLayout({
           <FloatingNav navItems={navItems} />
           {children}
         </ThemeProvider>
+        {/* </FollowerPointerCard> */}
       </body>
     </html>
   );
