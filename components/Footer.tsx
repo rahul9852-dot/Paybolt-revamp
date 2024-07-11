@@ -7,7 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
 <footer className="flex flex-col bg-black-100  ">
-  <Button className="flex flex-col md:flex-row items-center justify-between md:space-y-0  rounded-lg px-10 py-10 cursor-none">
+  <Button className="flex flex-col md:flex-row items-center justify-between md:space-y-0  rounded-lg px-10 py-10 cursor-none w-full">
     <div className="flex flex-col">
       <div className="flex mb-6 gap-x-4 justify-center md:justify-start">
         <div className="w-10 h-10 bg-white rounded-full flex mr-2">

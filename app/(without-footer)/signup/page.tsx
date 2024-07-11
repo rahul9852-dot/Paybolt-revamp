@@ -106,7 +106,6 @@ const SignUp = () => {
           src="/Onboarding.jpg"
           alt="Signup-img"
           className="h-dvh inline-block object-cover"
-          loading="lazy"
         />
       </div>
     </section>

@@ -30,7 +30,6 @@ const InstantBanking = () => {
           height={500}
           alt="linear demo image"
           className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
-          loading="lazy"
         />
       </WobbleCard>
     <div className="py-20 w-full px-20">
@@ -57,8 +56,7 @@ const InstantBanking = () => {
                 src={feature.thumbnail}
                 alt={feature.thumbnail}
                 className="lg:w-32 md:w-20 w-16"
-                loading="lazy"
-              />
+                    />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
                   {feature.title}

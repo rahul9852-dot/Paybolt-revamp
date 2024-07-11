@@ -77,8 +77,8 @@ const ContactUs = () => {
             src="/Contact.jpg"
             alt="Loading"
             className="h-dvh inline-block object-cover"
-            loading='lazy'
-          />
+
+            />
         </div>
       </div>
     </section>
