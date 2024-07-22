@@ -64,6 +64,7 @@ const Hero = () => {
                   </div>
                 ))}
           </div>
+         
           <span>Trusted by {" "} 2600+ merchants</span>
             <MagicButton
               title="Explore products"

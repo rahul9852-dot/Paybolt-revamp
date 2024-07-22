@@ -156,5 +156,5 @@ ListItem.displayName = "ListItem"
         ))}
       </motion.div>
     </AnimatePresence>
-  );
+  )
 };
