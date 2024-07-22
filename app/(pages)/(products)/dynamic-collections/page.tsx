@@ -1,4 +1,4 @@
-
+"use client"
 import MagicButton from "@/components/MagicButton";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import { Button } from "@/components/ui/MovingBorders";
