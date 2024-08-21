@@ -2,7 +2,6 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaSquareXTwitter 
 
 import Link from "next/link";
 import { Button } from "./ui/MovingBorders";
-import Image from "next/image";
 
 const Footer = () => {
   return (

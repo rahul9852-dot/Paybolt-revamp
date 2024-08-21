@@ -5,16 +5,15 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import React, { useState } from "react";
 import { MultiStepLoader as Loader } from "./ui/MultiStepLoader";
-import {  IconSquareRoundedX } from "@tabler/icons-react";
+import { IconSquareRoundedX } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { TypewriterEffect } from "./ui/TypeWriterEffect";
-import { AnimatedTooltip } from "./ui/AnimatedToolTip";
+import { AnimatedTooltip } from "./ui/AnimatedTooltip";
 import { FlipWords } from "./ui/FlipWords";
 import { loadingStates, words, people } from "@/constants/hero.constants";
-const wordsList = ["Payout", "Payin", "remitment", "banking", "Transfer"]
-const stars = [0,1,2,3,4];
+const wordsList = ["Payout", "Payin", "remitment", "banking", "Transfer"];
+const stars = [0, 1, 2, 3, 4];
 const Hero = () => {
-
   const [loading, setLoading] = useState(false);
   return (
     <div className={cn("pb-20 pt-36", loading && "bg-black z-40")}>
@@ -43,40 +42,50 @@ const Hero = () => {
       <div className="flex justify-center relative my-10 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <div className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Simplified 
-            <FlipWords words={wordsList}  />
+            Simplified
+            <FlipWords words={wordsList} />
           </div>
           <TextGenerateEffect
             words="Simplifying Payments Amplifying Success."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <TypewriterEffect className="text-center md:tracking-wider my-4 text-sm md:text-lg lg:text-2xl" words={words}  />
+          <TypewriterEffect
+            className="text-center md:tracking-wider my-4 text-sm md:text-lg lg:text-2xl"
+            words={words}
+          />
           <div className="flex flex-row items-center justify-center my-4 w-full">
-                <AnimatedTooltip items={people} />
-                {stars.map((idx) => (
-                  <div key={idx} className="flex items-center justify-center">
-                    <div className={idx === 0 ? "ml-6" : ""}>
-                      <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" className="h-4 w-4 text-yellow-400 mx-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                      </svg>
-                    </div>
-                  </div>
-                ))}
+            <AnimatedTooltip items={people} />
+            {stars.map((idx) => (
+              <div key={idx} className="flex items-center justify-center">
+                <div className={idx === 0 ? "ml-6" : ""}>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 16 16"
+                    className="h-4 w-4 text-yellow-400 mx-1"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                  </svg>
+                </div>
+              </div>
+            ))}
           </div>
-         
-          <span>Trusted by {" "} 2600+ merchants</span>
-            <MagicButton
-              title="Explore products"
-              icon={
-                <FaLocationArrow />
-            }
-              position="right"
-              handleClick={() => setLoading(true)}
-            />
+
+          <span>Trusted by 2600+ merchants</span>
+          <MagicButton
+            title="Explore products"
+            icon={<FaLocationArrow />}
+            position="right"
+            handleClick={() => setLoading(true)}
+          />
         </div>
         <div className="flex flex-col overflow-hidden">
-      {/* <ContainerScroll
+          {/* <ContainerScroll
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
@@ -97,16 +106,16 @@ const Hero = () => {
           draggable={false}
         />
       </ContainerScroll> */}
-    </div>
+        </div>
       </div>
       {loading && (
-            <button
-              className="fixed top-4 right-4 text-black dark:text-white z-[200] "
-              onClick={() => setLoading(false)}
-            >
-              <IconSquareRoundedX className="h-100 w-100" />
-            </button>
-          )}
+        <button
+          className="fixed top-4 right-4 text-black dark:text-white z-[200] "
+          onClick={() => setLoading(false)}
+        >
+          <IconSquareRoundedX className="h-100 w-100" />
+        </button>
+      )}
     </div>
   );
 };
